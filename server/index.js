@@ -2,10 +2,12 @@ const config = require("config");
 const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
+const cors = require('cors');
 
 const routes = require('./routes/routes');
-const users = require('./routes/users');
-const auth = require('./routes/auth');
+const register = require('./routes/register');
+const login = require('./routes/login');
+const home = require('./routes/user');
 
 if(!config.get('jwtPrivateKey')){
     console.log('FATAL ERROR: jwtPrivateKey is not defined.');
@@ -17,9 +19,10 @@ mongoose.connect('mongodb://localhost/wyng')
     .catch(()=>console.error('could not connect to MongoDB...'));
 
 app.use(express.json());
-app.use('/home', routes);
-app.use('/api/users', users);
-app.use('/api/auth', auth);
+app.use(cors());
+app.use('/home', home);
+app.use('/api/register', register);
+app.use('/api/login', login);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Listening on port ${port}`));
