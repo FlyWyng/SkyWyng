@@ -1,0 +1,35 @@
+.container {
+  display: grid;
+  height: 40vw;
+  width: 35vw;
+  justify-content: center;
+  align-content: center;
+  background-color: blueviolet;
+  text-align: center;
+}
+
+.form {
+  display: grid;
+  width: 25vw;
+  row-gap: 10px;
+}
+
+.inputField {
+  background-color: rgb(242, 248, 248);
+  border: 2px solid red;
+  border-radius: 10px;
+  height: 5vh;
+}
+
+.submit {
+  background-color: red;
+  border: 2px solid rgb(190, 41, 41);
+  border-radius: 1vw;
+  height: 5vh;
+  color: white;
+}
+
+.error {
+  background-color: red;
+  font-size: 2vh;
+}
