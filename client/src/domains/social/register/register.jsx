@@ -1,23 +1,33 @@
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import {useNavigate} from 'react-router-dom';
 import '../social.css';
 import axios from 'axios';
 
 function Register() {
-    const [user, setUser] = useState({name:"", email:"", password:""});
-    const [error, setError] = useState("");
+    const name = useRef();
+    const email = useRef();
+    const password = useRef();
+    const passwordAgain = useRef();
+
     const navigate = useNavigate();
 
     const submit = async (e) =>{
         e.preventDefault();
-        try{
-            console.log(user);
-            const response = await axios.post('http://localhost:3000/api/register', user);
-            navigate("/login");
-            console.log(response);
-        }catch(ex){
-            console.log(ex);
-            setError(ex.message);
+        if(passwordAgain.current.value !== password.current.value){
+            password.current.setCustomValidity("Passwords don't match!");
+        }else{
+            const user={
+                name: name.current.value,
+                email: email.current.value,
+                password: password.current.value
+            }
+            try{
+                await axios.post('http://localhost:5000/api/register', user);
+                navigate("/login");
+            }catch(err){
+                console.log(err);
+            }
+            
         }
     }
     
@@ -25,26 +35,28 @@ function Register() {
         <div className='container'>
             <h2>Register</h2>
             <form className='form' onSubmit={submit}>
-                {error && <div className='error'>{error}</div>}
                 <input className = 'inputField' 
                         type="text" 
-                        placeholder='Name' 
-                        value={user.name} 
-                        onChange={(n) => setUser({...user, name:n.target.value})}
+                        placeholder='Name'
+                        ref={name}
                         required
                     />
                     <input className = 'inputField' 
-                        type="text" 
+                        type="email" 
                         placeholder='Email' 
-                        value={user.email} 
-                        onChange={(e) => setUser({...user, email:e.target.value})}
+                        ref={email}
                         required
                     />
                     <input className = 'inputField' 
-                        type="text" 
+                        type="password" 
                         placeholder='Password' 
-                        value={user.password} 
-                        onChange={(p) => setUser({...user, password:p.target.value})}
+                        ref={password}
+                        required
+                    />
+                    <input className = 'inputField' 
+                        type="password" 
+                        placeholder='Re-enter Password' 
+                        ref={passwordAgain}
                         required
                     />
                     <button className='submit' type='submit'>
