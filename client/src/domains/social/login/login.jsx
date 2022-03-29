@@ -15,7 +15,7 @@ function Login() {
             dispatch
         );
     }
-    console.log(user);
+    
     return(
         <div className='container'>
             <h2>Login</h2>

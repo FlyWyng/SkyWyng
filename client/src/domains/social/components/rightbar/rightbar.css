@@ -1,3 +1,18 @@
 .rightBar {
-  flex: 3;
+  /* background-color: rgb(255, 223, 245); */
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  grid-gap: 10px;
+}
+
+.wyngCard {
+  background-color: none;
+  border-radius: 0px 15px 0px 0px;
+  border: 2px solid rgb(10, 143, 121);
+}
+
+.chatBox {
+  background-color: none;
+  border: 2px solid rgb(10, 143, 121);
+  border-radius: 0px 0px 15px 0px;
 }
