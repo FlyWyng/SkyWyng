@@ -1,16 +1,16 @@
-.leftBar {
-  /* background-color: rgb(255, 223, 245); */
+.blogsLeftbar {
   display: grid;
   grid-template-rows: 2fr 1fr;
   grid-gap: 10px;
 }
 
-.puzzle {
-  border-radius: 0px 0px 0px 15px;
+.blogsCategories {
+  background: none;
+  border-radius: 15px 0px 0px 0px;
   border-right: 2px solid rgb(10, 143, 121);
 }
 
-.puzzleHeading {
+.blogsCategoriesHeading {
   font-weight: bolder;
   font-size: 20px;
   background-color: rgb(10, 143, 121);

@@ -1,0 +1,27 @@
+.blogsHeaderContainer {
+  height: 60px;
+  width: 100%;
+  background-color: rgb(10, 143, 121);
+  display: grid;
+  grid-template-columns: 2fr 4fr 2fr;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.blogsLogo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-left: 40px;
+  cursor: pointer;
+}
+
+.blogsSearchBar {
+  height: 30px;
+  width: 100%;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+}
