@@ -1,19 +1,21 @@
 import Header from '../../components/header/header';
 import Leftbar from '../../components/leftbar/leftbar';
-import Center from '../../components/center/center';
+import Feed from '../../components/feed/feed';
 import Rightbar from '../../components/rightbar/rightbar';
 import './home.css'
 
 function Home() {
     return (
-        <>
-            <Header/>
-            <div className="homeContainer">
+        <div className="homeContainer">
+            <div className='header'>
+                <Header/>
+            </div>
+            <div className="content">
                 <Leftbar/>
-                <Center/>
+                <Feed/>
                 <Rightbar/>
             </div>
-        </>
+        </div>
     );
 }
 

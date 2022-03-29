@@ -3,7 +3,8 @@ import './rightbar.css';
 function Rightbar() {
     return (  
         <div className="rightBar">
-            Right
+            <div className="wyngCard"></div>
+            <div className="chatBox"></div>
         </div>
     );
 }

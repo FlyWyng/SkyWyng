@@ -1,7 +1,7 @@
 .headerContainer {
-  height: 50px;
+  height: 60px;
   width: 100%;
-  background-color: purple;
+  background-color: rgb(10, 143, 121);
   display: flex;
   align-items: center;
   position: sticky;
@@ -76,5 +76,10 @@
   width: 32px;
   border-radius: 50%;
   object-fit: cover;
+  cursor: pointer;
+}
+
+.logout {
+  font-weight: bolder;
   cursor: pointer;
 }

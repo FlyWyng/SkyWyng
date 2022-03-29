@@ -2,6 +2,10 @@ import './header.css';
 import {Search, Person, Chat, Notifications} from '@mui/icons-material';
 
 function Header() {
+    const handleLogout = () => {
+        localStorage.clear();
+        window.location.reload();
+    }
     return (
         <div className="headerContainer">
             <div className="headerLeft">
@@ -32,7 +36,8 @@ function Header() {
                         <span>1</span>
                     </div>
                 </div>
-                <img src="" alt="X" className='headerImg'/>
+                <img src="assets/photo.jpg" alt="" className='headerImg'/>
+                <button className='logout' onClick={handleLogout}>Logout</button>
             </div>
         </div>
     );
