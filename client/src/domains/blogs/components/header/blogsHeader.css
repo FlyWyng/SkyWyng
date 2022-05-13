@@ -1,27 +1,18 @@
 .blogsHeaderContainer {
-  height: 60px;
+  height: 45px;
   width: 100%;
-  background-color: rgb(10, 143, 121);
-  display: grid;
-  grid-template-columns: 2fr 4fr 2fr;
+  background-color: blue;
   align-items: center;
-  position: sticky;
+  justify-content: space-between;
+  display: flex;
   top: 0;
+  border-radius: 15px 0 15px 0;
 }
 
 .blogsLogo {
   font-size: 24px;
   font-weight: bold;
   color: white;
-  margin-left: 40px;
+  margin-left: 30px;
   cursor: pointer;
-}
-
-.blogsSearchBar {
-  height: 30px;
-  width: 100%;
-  background-color: white;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
 }

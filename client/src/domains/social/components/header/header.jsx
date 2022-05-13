@@ -3,6 +3,7 @@ import {Search, Person, Chat, Notifications} from '@mui/icons-material';
 
 function Header() {
     const handleLogout = () => {
+        document.cookie.split(';').forEach(cookie => document.cookie = cookie.replace(/^ +/, '').replace(/=.*/, `=;expires=${new Date(0).toUTCString()};path=/`));
         localStorage.clear();
         window.location.reload();
     }

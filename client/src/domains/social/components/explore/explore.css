@@ -1,16 +1,17 @@
 .explore {
   background: none;
-  border-radius: 15px 0px 0px 0px;
-  border-right: 2px solid rgb(10, 143, 121);
+  border-radius: 15px;
+  border-right: 2px solid #3E8286;
+  border-left: 2px solid #3E8286;
 }
 
 .exploreHeading {
   font-weight: bolder;
   font-size: 20px;
-  background-color: rgb(10, 143, 121);
+  background-color: #3E8286;
   color: white;
   padding: 10px;
-  border-radius: 15px 0 0 0;
+  border-radius: 15px 15px 0 0;
 }
 
 .exploreOptions {
@@ -24,16 +25,16 @@
   /* border-bottom: 2px solid purple; */
 }
 .exploreOption:hover {
-  background-color: rgb(73, 202, 181);
+  background-color: rgb(84, 189, 230);
   color: white;
 }
 
 .exploreOptionText {
-  color: rgb(10, 143, 121);
+  color: #4aaaaf;
   width: 100%;
   margin-left: 5px;
   padding: 10px;
-  border-bottom: 2px solid rgb(10, 143, 121);
+  border-bottom: 1px solid rgb(209, 209, 255);
 }
 .exploreOptionText:hover {
   color: white;

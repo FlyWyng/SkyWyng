@@ -1,0 +1,27 @@
+.blogsFilterContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+  background-color: blue;
+  border-radius: 15px 0 15px 0;
+}
+
+.blogsFilterOption {
+  display: block;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 17px;
+  padding: 13px 0 11px 0;
+  cursor: pointer;
+}
+.blogsFilterOption:hover {
+  background-color: rgb(100, 100, 252);
+}
+
+.blogsFilterSearch {
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  margin: 8px;
+}

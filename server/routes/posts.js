@@ -1,5 +1,6 @@
 const { response } = require('express');
 const express = require('express');
+const auth = require('../middleware/auth');
 const { Post } = require('../models/post');
 const { User } = require('../models/User');
 const router = express.Router();
@@ -28,7 +29,7 @@ router.put('/:id', async(req,res)=>{
     }
 });
 
-router.delete('/:id', async(req,res)=>{
+router.delete('/:id',auth,async(req,res)=>{
     try{
         const post = await Post.findById(req.params.id);
         if(post.userId === req.body.userId){

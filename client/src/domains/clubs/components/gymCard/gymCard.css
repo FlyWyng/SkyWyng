@@ -1,0 +1,60 @@
+.gymCardContainer{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    height: 200px;
+    border: 1px solid #60c5ca;
+    background-color: #3E8286;
+    color: white;
+    cursor: pointer;
+}
+.gymCardContainer:hover{
+    transform: scale(1.01);
+    transition: 200ms ease-in-out; 
+}
+
+.gymCardImg{
+    width: 99%;
+    height: 98%;
+    object-fit: cover;
+    overflow: hidden;
+    border: 1px solid #60c5ca;
+}
+
+.gymCardInfo{
+    display: grid;
+    grid-template-rows: 0fr 1fr;
+}
+
+.gymCardTitle{
+    background-color: #60c5ca;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.gymCardRating{
+    float: right;
+    align-items: center;
+}
+
+.gymCardDetails{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.gymCardAbout{
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr;
+    margin: 5px;
+}
+
+.gymCardContactInfo{
+    border: 1px solid #60c5ca;
+}
+
+.gymCardFee{
+    display: grid;
+    justify-items: center;
+    background-color: #34686b;
+    margin: 5px;
+    border-radius: 5px;
+}

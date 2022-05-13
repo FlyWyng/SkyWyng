@@ -6,6 +6,8 @@ import BlogsHome from './domains/blogs/home/blogsHome';
 import { Routes,Route } from "react-router-dom";
 import { useContext } from 'react';
 import { AuthContext } from './context/AuthContext';
+import ClubsHome from './domains/clubs/home/clubsHome';
+import ClubsAdmin from './domains/clubs/admin/clubsAdmin';
 
 function App() {
   const { user } = useContext(AuthContext);
@@ -17,6 +19,8 @@ function App() {
           <Route path='login' element={<Login/>}/>
           <Route path='register' element={<Register/>}/>
           <Route path='blogs' element={<BlogsHome/>}/>
+          <Route path='clubs' element={<ClubsHome/>}/>
+          <Route path='clubs/admin' element={<ClubsAdmin/>}/>
         </Routes>     
     </div>
   );
