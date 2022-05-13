@@ -1,0 +1,13 @@
+.blogsRightbarContainer {
+  height: 98vh;
+  display: grid;
+  grid-template-rows: 1fr 100fr;
+  overflow-y: scroll;
+}
+
+.blogsRightBarContent {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}

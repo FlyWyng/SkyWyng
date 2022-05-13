@@ -23,6 +23,23 @@
   align-items: center;
 }
 
+.postTopRight{
+  position: relative;
+}
+
+.postOptionButton{
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.postOptions{
+  cursor: pointer;
+  position: absolute;
+  z-index: 5;
+  display: grid;
+}
+
 .postProfileImg {
   height: 35px;
   width: 35px;

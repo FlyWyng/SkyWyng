@@ -13,6 +13,7 @@ function Share() {
         e.preventDefault();
         const newPost = {
             userId: user._id,
+            userName: user.name,
             description: description.current.value
         }
         console.log(newPost);

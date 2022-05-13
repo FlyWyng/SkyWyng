@@ -5,11 +5,14 @@ const app = express();
 const cors = require('cors');
 const multer = require('multer');
 const path = require('path');
+const cookieParser = require('cookie-parser');
 
 const register = require('./routes/register');
 const login = require('./routes/login');
 const home = require('./routes/users');
 const posts = require('./routes/posts');
+const blogs = require('./routes/blogs/blogs');
+const clubs = require('./routes/clubs/clubs');
 
 if(!config.get('jwtPrivateKey')){
     console.log('FATAL ERROR: jwtPrivateKey is not defined.');
@@ -23,6 +26,7 @@ mongoose.connect('mongodb://localhost/wyng')
 
 app.use(express.json());
 app.use(cors());
+app.use(cookieParser());
 
 app.use('/images', express.static(path.join(__dirname, 'public/images')));
 const storage = multer.diskStorage({
@@ -46,6 +50,8 @@ app.use('/api/home', home);
 app.use('/api/register', register);
 app.use('/api/login', login);
 app.use('/api/posts', posts);
+app.use('/api/blogs', blogs);
+app.use('/api/clubs', clubs);
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Listening on port ${port}`));

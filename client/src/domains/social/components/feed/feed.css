@@ -1,6 +1,7 @@
 .feed {
   height: 89vh;
   /* background-color: plum; */
+  margin: 0 8vw;
   overflow-y: scroll;
 }
 

@@ -7,7 +7,7 @@ function Explore() {
         <div className='explore'>
                 <div className="exploreHeading">Explore</div>
                 <div className="exploreOptions">
-                    <Link to="/" className='exploreLink'>
+                    <Link to="/clubs" className='exploreLink'>
                         <div className="exploreOption">
                             <FitnessCenter htmlColor="goldenrod" className='exploreOptionIcon'/>
                             <span className="exploreOptionText">Clubs</span>
