@@ -1,0 +1,68 @@
+.loginContainer{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    background-color: #3E8286;
+}
+
+.loginForm{
+    display: grid;
+    width: 30vw;
+    padding: 20px;
+    grid-gap: 20px;
+    background-color: #233a3a;
+    border: 2px solid orangered;
+}
+
+.loginHeading{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: orangered;
+}
+
+.input-container{
+	position:relative;
+}
+
+.input-container label { 
+	position:absolute;
+	top:16px;
+	left:16px;
+	font-size:16px;
+	color:#fff;	
+	transition: all 0.2s ease-in-out;
+    background-color: #233a3a;
+}
+.input-container input{ 
+  border:2px solid #555;  
+  background:transparent;
+  width:100%;
+  padding:8px 0 5px 10px;
+  font-size:16px;
+  color:#fff;
+}
+.input-container input:focus{ 
+ border:none;	
+ outline:none;
+ border:2px solid orangered;	
+}
+
+.input-container input:focus ~ label,
+.input-container input:valid ~ label{
+	top:-11px;
+	font-size:14px;
+    padding: 3px;
+}
+
+.loginSubmit{
+    background-color: orangered;
+    border: 2px solid orangered;
+    border-radius: 10px;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+    font-weight: bolder;
+}

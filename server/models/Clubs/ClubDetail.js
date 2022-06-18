@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const gymSchema = mongoose.Schema({
+const clubDetailSchema = mongoose.Schema({
     gymId:{
         type: String,
         required: true
@@ -53,6 +53,6 @@ const gymSchema = mongoose.Schema({
 {timestamps: true}
 );
 
-const Gym = mongoose.model('Gym', gymSchema);
+const ClubDetail = mongoose.model('ClubDetail', clubDetailSchema);
 
-exports.Gym = Gym;
+exports.ClubDetail = ClubDetail;
