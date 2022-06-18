@@ -2,6 +2,7 @@ import React, { useRef, useContext } from 'react';
 import { loginCall } from '../../../apiCalls';
 import { AuthContext } from '../../../context/AuthContext';
 import '../social.css';
+import './login.css';
 
 function Login() {
     const email = useRef();
@@ -17,23 +18,27 @@ function Login() {
     }
     
     return(
-        <div className='container'>
-            <h2>Login</h2>
-            <form className='form' onSubmit={submit}>
+        <div className='loginContainer'>
+            <form className='loginForm' onSubmit={submit}>
+                <div className="loginHeading">Login</div>
                 {error && <div className='error'>{error}</div>}
-                <input className = 'inputField' 
-                    type="email" 
-                    placeholder='Email'
-                    ref={email} 
-                    required
-                />
-                <input className = 'inputField' 
-                    type="password" 
-                    placeholder='Password' 
-                    ref={password}
-                    required
-                />
-                <button className='submit' type='submit'>
+                <div className="input-container">
+                    <input className = 'inputField' 
+                        type="text"
+                        ref={email} 
+                        required
+                    />
+                    <label>Email</label>
+                </div>               
+                <div className="input-container">
+                    <input className = 'inputField' 
+                        type="password" 
+                        ref={password}
+                        required
+                    />
+                    <label>Password</label>
+                </div>
+                <button className='loginSubmit' type='submit'>
                     {isFetching ? "Loading" : "Login"}
                 </button>
             </form>

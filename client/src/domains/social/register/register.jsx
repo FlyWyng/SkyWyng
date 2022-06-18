@@ -1,13 +1,15 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import {useNavigate} from 'react-router-dom';
 import '../social.css';
 import axios from 'axios';
+import './register.css';
 
 function Register() {
     const name = useRef();
     const email = useRef();
     const password = useRef();
     const passwordAgain = useRef();
+    const [error, setError] = useState();
 
     const navigate = useNavigate();
 
@@ -25,43 +27,52 @@ function Register() {
                 await axios.post('http://localhost:5000/api/register', user);
                 navigate("/login");
             }catch(err){
-                console.log(err);
+                setError(err.response.data);
             }
             
         }
     }
     
     return(
-        <div className='container'>
-            <h2>Register</h2>
-            <form className='form' onSubmit={submit}>
-                <input className = 'inputField' 
+        <div className='registerContainer'>         
+            <form className='registerForm' onSubmit={submit}>
+                <div className="registerHeading">Register</div>
+                {error && <div className='error'>{error}</div>}
+                <div className="input-container">
+                    <input className = 'inputField' 
                         type="text" 
-                        placeholder='Name'
                         ref={name}
                         required
                     />
+                    <label>Name</label>
+                </div>
+                <div className="input-container">
                     <input className = 'inputField' 
-                        type="email" 
-                        placeholder='Email' 
+                        type="text" 
                         ref={email}
                         required
                     />
+                    <label>Email</label>
+                </div>
+                <div className="input-container">
                     <input className = 'inputField' 
                         type="password" 
-                        placeholder='Password' 
                         ref={password}
                         required
                     />
-                    <input className = 'inputField' 
+                    <label>Password</label>
+                </div>
+                <div className="input-container">
+                    <input className = 'inputField'
                         type="password" 
-                        placeholder='Re-enter Password' 
                         ref={passwordAgain}
                         required
                     />
-                    <button className='submit' type='submit'>
-                        Register
-                    </button>
+                    <label>Confirm Password</label>
+                </div>
+                <button className='submit' type='submit'>
+                    Register
+                </button>
             </form>
         </div>        
     )
