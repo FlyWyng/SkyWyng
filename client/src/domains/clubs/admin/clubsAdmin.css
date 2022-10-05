@@ -1,0 +1,58 @@
+.clubsAdminContainer{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    background-color: #3E8286;
+    overflow-y: scroll;
+}
+
+.clubsAdminContainerLeftHeader{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+}
+.clubsAdminContainerLeftDescription{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.clubsAdminContainerADDClubButton{
+    display: flex;
+    background-color: rgb(166, 248, 166);
+    margin: 5px;
+    padding: 3px;
+    font-size: 20px;
+    color: green;
+    border: 2px solid green;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.clubsAdminContainerCreateClub{
+    width: 50vw;
+    background-color: #233a3a;
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    z-index: 5;
+    border: 2px solid red;
+    display: grid;
+    grid-template-rows: 0fr 1fr 0fr;
+    padding: 5px;
+}
+
+.clubsAdminContainerRight{
+    display:grid;
+}
+
+.clubsAdminCard{
+    width: 100%;
+    display: block;
+}

@@ -1,52 +1,17 @@
 .clubsRightSide{
     display: grid;
-    grid-template-rows: 0fr 1fr;
     grid-gap: 2px;
+    height: 100vh;
     overflow-y: scroll;
 }
 
-.clubsNavBar {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
-    background-color: #3E8286;
-  }
-  
-.clubsNavBarOption {
-    display: block;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    font-size: 17px;
-    padding: 13px 0 11px 0;
-    cursor: pointer;
-}
-.clubsNavBarOption:hover {
-    background-color: #60c5ca;
-}
-
-.clubsNavBarSearch {
-    background-color: white;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    margin: 8px;
-}
-
 .clubsCenter{
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-}
-
-.clubsCenterLeft{
-    display: grid;
-    grid-gap: 8px;
-    margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .clubsGymCard{
     border: 2px solid #3E8286;
-}
-
-.clubsCenterRight{
-    display:grid;
 }

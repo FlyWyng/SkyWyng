@@ -1,11 +1,15 @@
 .gymCardContainer{
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    height: 200px;
-    border: 1px solid #60c5ca;
-    background-color: #3E8286;
+    grid-template-rows: 1fr 1fr;
+    height: 500px;
+    width: 350px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+    background-color: #202627;
     color: white;
     cursor: pointer;
+    margin: 5px;
 }
 .gymCardContainer:hover{
     transform: scale(1.01);
@@ -13,48 +17,65 @@
 }
 
 .gymCardImg{
-    width: 99%;
-    height: 98%;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
     overflow: hidden;
-    border: 1px solid #60c5ca;
 }
 
 .gymCardInfo{
     display: grid;
     grid-template-rows: 0fr 1fr;
+    grid-gap: 2px;
 }
 
 .gymCardTitle{
-    background-color: #60c5ca;
+    background: rgb(0,234,189);
+    background: linear-gradient(180deg, rgba(0,234,189,1) 0%, rgba(0,125,101,1) 100%);
     text-align: center;
-    font-size: 1.5rem;
+    font-family: Optima,Segoe,Segoe UI,Candara,Calibri,Arial,sans-serif;
+    font-weight: bold;
+    font-size: 25px;
 }
 
-.gymCardRating{
-    float: right;
-    align-items: center;
+.gymCardInfo{
+    font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
 }
 
-.gymCardDetails{
+.gymCardImpInfo{
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1.5fr 0fr 1fr;
+    border-top: 2px solid rgba(0,125,101,1);
 }
 
-.gymCardAbout{
-    display: grid;
-    grid-template-rows: 2fr 1fr 1fr;
-    margin: 5px;
+.gymCardInfoTableData,.gymCardInfoTable,.gymCardInfoTableRow,.gymCardInfoTableHeader{
+    font-size: 15px;
+    border: 2px solid #202627;
+    border-collapse: collapse;
+}
+
+.gymCardInfoTableData,.gymCardInfoTableHeader{
+    background-color: #171a1a;
+}
+
+.gymCardInfoVerticalLine{
+ border-left: 2px solid rgba(0,125,101,1);
+}
+.gymCardTimeContactInfo{
+    align-self: center;
+}
+
+.gymCardTimings{
+    text-align: center;
 }
 
 .gymCardContactInfo{
-    border: 1px solid #60c5ca;
+    text-align: center;
 }
 
 .gymCardFee{
     display: grid;
     justify-items: center;
-    background-color: #34686b;
     margin: 5px;
-    border-radius: 5px;
+    border-left: 1px solid orangered;
 }

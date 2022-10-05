@@ -1,17 +1,14 @@
 .explore {
-  background: none;
-  border-radius: 15px;
-  border-right: 2px solid #3E8286;
-  border-left: 2px solid #3E8286;
+  background: rgb(35, 34, 34);
 }
 
 .exploreHeading {
   font-weight: bolder;
   font-size: 20px;
-  background-color: #3E8286;
+  background: rgb(11, 11, 11);
+  border-bottom: 3px solid rgba(0,125,101,1);
   color: white;
   padding: 10px;
-  border-radius: 15px 15px 0 0;
 }
 
 .exploreOptions {
@@ -21,20 +18,21 @@
 .exploreOption {
   display: flex;
   align-items: center;
+  background-color: rgb(19, 18, 18);
+  margin: 1px;
   /* padding: 10px; */
   /* border-bottom: 2px solid purple; */
 }
 .exploreOption:hover {
-  background-color: rgb(84, 189, 230);
+  background-color: rgba(0,125,101,1);
   color: white;
 }
 
 .exploreOptionText {
-  color: #4aaaaf;
+  color: white;
   width: 100%;
-  margin-left: 5px;
+  margin: 1px;
   padding: 10px;
-  border-bottom: 1px solid rgb(209, 209, 255);
 }
 .exploreOptionText:hover {
   color: white;

@@ -1,9 +1,11 @@
 const mongoose = require('mongoose');
+const Joi = require('joi');
 
 const gymSchema = mongoose.Schema({
     gymId:{
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     gymName:{
         type: String,
@@ -17,19 +19,22 @@ const gymSchema = mongoose.Schema({
     },
     trainers:{
         type: Array,
-        default: []
+        default: [],
+        required: true
     },
     timings:{
         type: Array,
-        default: []
+        default: [],
+        required: true
     },
     fees:{
         type: Array,
-        default: []
+        default: [],
+        required: true
     },
     img: {
-        type: Array,
-        default: []
+        type: String,
+        required: true
     },
     description: {
         type: String,
@@ -46,8 +51,7 @@ const gymSchema = mongoose.Schema({
         required: true
     },
     rating: {
-        type: Number,
-        required: true
+        type: Number
     }
 },
 {timestamps: true}
@@ -55,4 +59,21 @@ const gymSchema = mongoose.Schema({
 
 const Gym = mongoose.model('Gym', gymSchema);
 
+function validateClub(user) {
+    const schema = Joi.object({
+        gymName: Joi.string().min(5).max(50).required(),
+        owner: Joi.string().min(5).max(50).required(),
+        trainers: Joi.array().items(Joi.string().min(5).max(50)),
+        timings: Joi.array().items(Joi.string().min(5).max(50)),
+        fees: Joi.array().items(Joi.number()).required(),
+        img: Joi.string().min(5).max(100).required(),
+        description: Joi.string().min(5).max(512).required(),
+        address: Joi.string().min(5).max(255).required(),
+        contact: Joi.string().min(5).max(100).required()
+    });
+
+    return schema.validate(user);
+}
+
 exports.Gym = Gym;
+exports.validate = validateClub;
