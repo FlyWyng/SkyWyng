@@ -1,0 +1,109 @@
+.AdminClubCardContianer{
+    width: 98%;
+    display: grid;
+    background-color: #233a3a;
+    margin: 2px;
+    padding: 5px;
+    box-shadow: -1px 0px 9px -2px rgba(0,0,0,1);
+    -webkit-box-shadow: -1px 0px 9px -2px rgba(0,0,0,1);
+    -moz-box-shadow: -1px 0px 9px -2px rgba(0,0,0,1);
+}
+.AdminClubCardContianer:hover{
+    background-color: #3E8286;
+}
+
+.AdminClubTitle{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    cursor: pointer;
+    align-items: center;
+}
+
+.AdminClubText{
+    color: white;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.AdminClubsBlackOverlay{
+    background-color: black;
+    opacity: 0.7;
+    z-index: 1;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+.AdminClubInfo{
+    width: 50vw;
+    background-color: #233a3a;
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    z-index: 2;
+    border: 2px solid red;
+    display: grid;
+    grid-template-rows: 0fr 1fr 0fr;
+    padding: 5px;
+}
+
+.AdminClubInfoHeader{
+    color: orangered;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.AdminClubInfoTable{
+    display: grid;
+    justify-content: center;
+    margin: 10px;
+}
+
+table,td,tr{
+    border-collapse: collapse;
+    color: white;
+    font-size: large;
+    border: 1px solid white;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.AdminClubInfoInputField{
+    width: 25vw;
+}
+
+.AdminClubInfoButtons{
+    display: flex;
+    justify-content: center;
+}
+.AdminClubInfoButtonEdit{
+    display: flex;
+    background-color: rgb(166, 248, 166);
+    margin: 5px;
+    padding: 3px;
+    font-size: 20px;
+    color: green;
+    border: 2px solid green;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.AdminClubInfoButtonEdit:hover{
+    transform: scale(1.05);
+}
+
+.AdminClubInfoButtonDelete{
+    display: flex;
+    background-color: rgb(255, 152, 152);
+    margin: 5px;
+    font-size: 20px;
+    color: rgb(198, 3, 3);
+    border: 2px solid rgb(198, 3, 3);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.AdminClubInfoButtonDelete:hover{
+    transform: scale(1.05);
+}
